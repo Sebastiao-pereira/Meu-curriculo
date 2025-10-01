@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo com degradê preto/vermelho */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000, #8B0000);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Menu de navegação */
+nav {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #00e1ff;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Menu hamburguer */
+.hamburguer {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #02afff;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+/* Checkbox invisível */
+#menu-toggle {
+    display: none;
+}
+
+/* Container das seções */
+header, section {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(0,0,0,0.7);
+    padding: 25px 30px;
+    border-radius: 12px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    border-bottom: 2px solid #0004ff;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #00b7ff;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 3px solid #00BFFF;
+}
+
+/* Títulos das seções */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #00BFFF;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* Listas */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Links de contato */
+#contato a {
+    color: #00BFFF;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade e menu hamburguer */
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #menu-toggle:checked + .hamburguer + .menu {
+        display: flex;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
